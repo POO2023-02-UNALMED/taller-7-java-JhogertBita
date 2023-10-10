@@ -11,7 +11,7 @@ public class Tesis extends Escrito {
       String conclusion, String referencias, String interpretacion) {
     super(origen, titulo, autor, paginas);
     this.idea=idea;
-    Tesis.argumentos=argumentos;
+    this.argumentos=argumentos;
     this.conclusion = conclusion;
     this.referencias = referencias;
     this.interpretacion=interpretacion;
@@ -23,7 +23,10 @@ public class Tesis extends Escrito {
   public String interpretacion() {
     return this.interpretacion;
   }
-
+  public String toString() {
+    return this.getOrigen()+"\n"+this.getTitulo()+"\n"+this.getAutor()+"\n"+this.getPaginas()+"\n"+this.getIdea()
+    +"\n"+Tesis.getArgumentos().length+"\n"+this.getConclusion()+"\n"+this.getReferencias();
+  }
 
   public String getIdea() {
     return idea;
